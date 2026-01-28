@@ -1,16 +1,16 @@
 .fab {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    padding: 14px;
-    background-color: #877EED;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	padding: 14px;
+	background-color: rgb(142, 81, 255);
+	border: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .fab:hover {
-    background-color: #544ACB;
+	background-color: oklch(54.1% 0.281 293.009);
 }

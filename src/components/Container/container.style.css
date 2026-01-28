@@ -1,8 +1,9 @@
 .container {
-    background-color: #1E1E1E;
-    border-radius: 16px;
-    width: 440px;
-    max-width: 90%;
-    margin: 0 auto;
-    margin-top: 15%;
+	background-color: oklch(12.9% 0.042 264.695);
+	border-radius: 16px;
+	width: 440px;
+	max-width: 90%;
+	margin: 0 auto;
+	margin-top: 5%;
+	/* margin-bottom: 24px; */
 }

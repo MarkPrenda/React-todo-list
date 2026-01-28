@@ -1,6 +1,6 @@
 .header {
-    padding: 24px;
-    background-color: #877EED;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+	padding: 24px;
+	background-color: rgba(0142, 81, 255, 0.1);
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
 }
