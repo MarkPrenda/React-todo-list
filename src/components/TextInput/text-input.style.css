@@ -1,0 +1,27 @@
+.text-input {
+	font-size: 16px;
+	line-height: 150%;
+	color: rgb(234, 234, 234);
+	border-radius: 16px;
+	border: none;
+	width: 360px;
+	max-width: 100%;
+	padding: 12px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+.text-input::placeholder {
+	color: rgba(234, 234, 234, 0.5);
+}
+
+.text-input:focus::placeholder {
+	color: #8e51ff;
+}
+
+.text-input:focus {
+	/* Cor desejada */
+	outline: none;
+	background-color: rgba(142, 81, 255, 0.1);
+	box-shadow: 0px 0px 0px 4px #8e51ff;
+}

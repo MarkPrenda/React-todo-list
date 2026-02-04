@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ChecklistsWrapper } from "./components/ChecklistsWrapper";
 import { Container } from "./components/Container";
 import { Dialog } from "./components/Dialog";
@@ -9,6 +10,8 @@ import { IconPlus, IconSchool } from "./components/icons";
 import { SubHeading } from "./components/SubHeading";
 import { ToDoItem } from "./components/ToDoItem";
 import { ToDoList } from "./components/ToDoList";
+
+import { ToDoForm } from "./components/ToDoForm";
 
 const todos = [
 	{
@@ -52,30 +55,45 @@ const completed = [
 ];
 
 function App() {
+	const [showDialog, setShowDialog] = useState(false);
+
+	const toggleDialog = () => {
+		setShowDialog(!showDialog);
+		// console.log("alternar modal");
+	};
+
+	const addToDo = () => {
+		console.log("precisamos add um novo todo");
+		toggleDialog();
+	};
 	return (
 		<main>
 			<Container>
 				<Header>
 					<Heading>
-						<IconSchool /> Plano de estudos
+						<IconSchool /> Midnite - TODO
 					</Heading>
 				</Header>
-				<Dialog />
+
 				<ChecklistsWrapper>
-					<SubHeading>Para estudar</SubHeading>
+					<SubHeading>To study</SubHeading>
 					<ToDoList>
 						{todos.map(function (t) {
 							return <ToDoItem key={t.id} item={t} />;
 						})}
 					</ToDoList>
-					<SubHeading>Concluído</SubHeading>
+					<SubHeading>Finished</SubHeading>
 					<ToDoList>
 						{completed.map(function (t) {
 							return <ToDoItem key={t.id} item={t} />;
 						})}
 					</ToDoList>
 					<Footer>
-						<FabButton>
+						<Dialog isOpen={showDialog} onClose={toggleDialog}>
+							<ToDoForm onSubmit={addToDo} />
+						</Dialog>
+
+						<FabButton onClick={toggleDialog}>
 							<IconPlus />
 						</FabButton>
 					</Footer>

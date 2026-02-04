@@ -1,0 +1,7 @@
+.to-do-form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	justify-content: center;
+	/* align-items: center; */
+}

@@ -12,5 +12,6 @@
 }
 
 .fab:hover {
-	background-color: oklch(54.1% 0.281 293.009);
+	background-color: rgb(127, 34, 254);
+	box-shadow: 0px 0px 0px 4px #8e51ff;
 }

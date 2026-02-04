@@ -45,24 +45,31 @@
 
 .todo-item .actions {
 	display: flex;
-	gap: 8px;
+	gap: 1px;
 	align-items: center;
 }
 
-.todo-item .actions .btn {
+.todo-item .actions .icon-btn {
 	/* background-color: transparent; */
-	height: 32px;
-	width: 32px;
-	background-color: rgba(255, 255, 255, 0.1);
-	border-radius: 24px;
+	height: 40px;
+	width: 48px;
+	background-color: rgba(255, 255, 255, 0.05);
 	border: none;
 	cursor: pointer;
 	margin: 0;
 }
-.todo-item .actions .btn:hover {
-	background-color: rgba(255, 255, 255, 0.2);
+
+.actions #left {
+	border-radius: 24px 0 0 24px;
+}
+.actions #right {
+	border-radius: 0 24px 24px 0;
 }
 
-.todo-item .actions .btn:hover svg path {
+.todo-item .actions .icon-btn:hover {
+	background-color: rgba(142, 81, 255, 0.2);
+}
+
+.todo-item .actions .icon-btn:hover svg path {
 	fill: #eaeaea;
 }

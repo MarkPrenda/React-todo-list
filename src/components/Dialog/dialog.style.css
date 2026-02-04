@@ -1,4 +1,37 @@
-::backdrop {
-	background-color: #020618;
-	opacity: 0.75;
+@supports (backdrop-filter: blur(8px)) {
+	dialog::backdrop {
+		backdrop-filter: blur(8px);
+		background: rgba(79, 80, 97, 0.1);
+	}
+}
+
+.dialog {
+	background-color: rgb(2, 6, 24);
+	border: none;
+	opacity: 0.8;
+	border-radius: 24px;
+	box-shadow: rgba(130, 109, 248, 0.1) 0px 8px 16px;
+	padding: 16px;
+}
+
+.btn-close-wrapper {
+	text-align: right;
+}
+
+.btn-close {
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255, 255, 255, 0.05);
+	border-radius: 24px;
+	border: none;
+	cursor: pointer;
+	margin: 0;
+}
+
+.btn-close:hover {
+	background-color: rgba(142, 81, 255, 0.2);
+}
+
+.dialog .body {
+	padding: 16px 0 0 0;
 }
