@@ -1,11 +1,12 @@
 .container {
 	background-color: #020618;
 	border-radius: 16px;
+
 	width: 440px;
 	max-width: 90%;
 	margin: 0 auto;
 	margin-top: 5%;
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 16px;
+	box-shadow: rgba(131, 7, 202, 0.2) 0px 16px 48px;
 
 	/* margin-bottom: 24px; */
 }
