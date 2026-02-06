@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 }
 #root {
-	padding-top: 24px; /* não margin */
+	padding-top: 24px;
 }
 
 body {
@@ -12,8 +12,8 @@ body {
 
 	background: linear-gradient(
 		to bottom,
-		oklch(20.8% 0.042 265.755),
-		oklch(27.9% 0.041 260.031),
+		rgb(15, 23, 43),
+		rgb(29, 41, 61),
 		rgb(15, 23, 43)
 	);
 	background-repeat: no-repeat;
