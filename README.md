@@ -19,7 +19,7 @@ https://midniteto-do.vercel.app/
 
 > Adicione um GIF gravado da aplicação (ex: `demo.gif`) na raiz do projeto.
 
-![Demo](demo.gif)
+![](thumbnail.png)
 
 ---
 
