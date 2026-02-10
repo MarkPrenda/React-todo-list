@@ -44,15 +44,20 @@ function App() {
 						</Heading>
 					</Header>
 					<ChecklistsWrapper>
-						<TodoGroup
-							heading="To study"
-							items={todos.filter((t) => !t.completed)}
-						/>
-						{todos.length == 0 && <EmptyState />}
-						<TodoGroup
-							heading="Completed"
-							items={todos.filter((t) => t.completed)}
-						/>
+						{todos.length && (
+							<TodoGroup
+								heading="To study"
+								items={todos.filter((t) => !t.completed)}
+							/>
+						)}
+						{!todos.length && <EmptyState />}
+
+						{todos.length && (
+							<TodoGroup
+								heading="Completed"
+								items={todos.filter((t) => t.completed)}
+							/>
+						)}
 						<Footer>
 							<Dialog isOpen={showDialog} onClose={closeFormTodoDialog}>
 								<ToDoForm
