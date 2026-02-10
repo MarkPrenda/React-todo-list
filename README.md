@@ -14,13 +14,7 @@ Este projeto demonstra práticas de engenharia frontend aplicadas a um cenário 
 https://midniteto-do.vercel.app/
 
 ---
-
-## Demonstração
-
-> Adicione um GIF gravado da aplicação (ex: `demo.gif`) na raiz do projeto.
-
 ![](template.jpg)
-
 ---
 
 ## Visão geral
@@ -63,12 +57,14 @@ Prioridades do projeto:
 - useState
 - useEffect
 - useContext (estado global das tarefas)
+- Hooks customizados (encapsulamento de regras de negócio)
 
 ### Arquitetura
+- Context API para compartilhamento de estado global
+- Hooks customizados para separar lógica da UI
 - Componentização por responsabilidade
 - Componentes reutilizáveis (Button, Dialog, TodoItem, TodoGroup, Form)
 - CSS Modules (escopo local de estilos)
-- Separação clara entre UI, lógica e contexto
 
 ### Deploy
 - Vercel com CI/CD automático
@@ -103,6 +99,8 @@ Organização voltada para escalabilidade, legibilidade e manutenção contínua
 - Accessibility: 95+
 - Best Practices: 100
 - SEO: 100
+
+![](lighthouse.jpg)
 
 ### Runtime
 - 100% client-side
@@ -143,5 +141,5 @@ Projeto desenvolvido durante a formação React da Alura e posteriormente refina
 ### Autor
 
 Mark Prenda
-Frontend Developer • UI/UX Designer
+Software Engineer • UI/UX Designer
 
