@@ -1,0 +1,35 @@
+.empty-state {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+
+	margin: 0 24px 64px;
+	padding: 0;
+}
+.empty-state p {
+	color: oklch(92.9% 0.013 255.508);
+	text-align: center;
+	font-size: 16px;
+	line-height: 150%;
+	margin: 0;
+}
+
+.empty-state svg {
+	width: 64px;
+	height: 64px;
+	color: rgb(142, 81, 255);
+}
+
+.icon-area {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	width: 128px;
+	height: 128px;
+	border-radius: 64px;
+
+	background-color: rgba(142, 81, 255, 0.2);
+}

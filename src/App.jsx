@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import { use } from "react";
 import { ChecklistsWrapper } from "./components/ChecklistsWrapper";
 import { Container } from "./components/Container";
 import { Dialog } from "./components/Dialog";
@@ -6,26 +6,32 @@ import { FabButton } from "./components/FabButton";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Heading } from "./components/Heading";
-import { IconPlus, IconSchool } from "./components/icons";
-import { SubHeading } from "./components/SubHeading";
-import { ToDoItem } from "./components/ToDoItem";
-import { ToDoList } from "./components/ToDoList";
+import { IconPlus } from "./components/icons";
 import { ToDoForm } from "./components/ToDoForm";
 import TodoContext from "./components/TodoProvider/TodoContext";
 import { TodoGroup } from "./components/TodoGroup";
+import { ListTodo, SquareDashed } from "lucide-react";
+import { EmptyState } from "./components/EmptyState";
 
 function App() {
-	const [showDialog, setShowDialog] = useState(false);
-
-	const { todos, addToDo } = use(TodoContext);
-
-	const toggleDialog = () => {
-		setShowDialog(!showDialog);
-	};
+	const {
+		todos,
+		addToDo,
+		showDialog,
+		openFormTodoDialog,
+		closeFormTodoDialog,
+		selectedTodo,
+		editTodo,
+	} = use(TodoContext);
 
 	const handleFormSubmit = (formData) => {
-		addToDo(formData);
-		toggleDialog();
+		if (selectedTodo) {
+			editTodo(formData);
+		} else {
+			addToDo(formData);
+		}
+
+		closeFormTodoDialog();
 	};
 
 	return (
@@ -34,7 +40,7 @@ function App() {
 				<Container>
 					<Header>
 						<Heading>
-							<IconSchool /> Midnite - TODO
+							<ListTodo /> Midnite - TODO
 						</Heading>
 					</Header>
 					<ChecklistsWrapper>
@@ -42,16 +48,20 @@ function App() {
 							heading="To study"
 							items={todos.filter((t) => !t.completed)}
 						/>
+						{todos.length == 0 && <EmptyState />}
 						<TodoGroup
 							heading="Completed"
 							items={todos.filter((t) => t.completed)}
 						/>
 						<Footer>
-							<Dialog isOpen={showDialog} onClose={toggleDialog}>
-								<ToDoForm onSubmit={handleFormSubmit} />
+							<Dialog isOpen={showDialog} onClose={closeFormTodoDialog}>
+								<ToDoForm
+									onSubmit={handleFormSubmit}
+									defaultValue={selectedTodo?.description}
+								/>
 							</Dialog>
 
-							<FabButton onClick={toggleDialog}>
+							<FabButton onClick={() => openFormTodoDialog()}>
 								<IconPlus />
 							</FabButton>
 						</Footer>

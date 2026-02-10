@@ -14,6 +14,7 @@ export function IconSchool() {
 		</svg>
 	);
 }
+
 export function IconPencil() {
 	return (
 		<svg
