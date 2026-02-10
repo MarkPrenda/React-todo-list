@@ -99,8 +99,9 @@ Organização voltada para escalabilidade, legibilidade e manutenção contínua
 - Accessibility: 95+
 - Best Practices: 100
 - SEO: 100
-
-![](lighthouse.jpg)
+---
+![](lighthouse.png)
+---
 
 ### Runtime
 - 100% client-side
