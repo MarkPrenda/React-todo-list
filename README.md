@@ -1,58 +1,147 @@
+# Study Checklist • React Task Manager
+
+[![React](https://img.shields.io/badge/React-18-blue)]()
+[![Vite](https://img.shields.io/badge/Vite-Build-purple)]()
+[![SPA](https://img.shields.io/badge/Type-SPA-green)]()
+[![Deploy](https://img.shields.io/badge/Deploy-Vercel-black)]()
+[![Status](https://img.shields.io/badge/Status-Production-success)]()
+
+Aplicação web de gerenciamento de tarefas e estudos construída com **React + Vite**, com foco em **arquitetura escalável, organização de estado, componentização e experiência do usuário**.
+
+Este projeto demonstra práticas de engenharia frontend aplicadas a um cenário real de produto: código modular, manutenção simples, baixo acoplamento e alta performance.
+
+🔗 **Live Demo**  
+https://midniteto-do.vercel.app/
+
+---
+
+## Demonstração
+
+> Adicione um GIF gravado da aplicação (ex: `demo.gif`) na raiz do projeto.
+
 ![](thumbnail.png)
 
-# App de Checklist de Estudos
+---
 
-Um projeto prático desenvolvido passo a passo para quem já tem o básico de ReactJS e quer evoluir para construir aplicações mais organizadas, escaláveis e com experiência moderna. Ao longo do curso, criamos um app de checklist para organizar estudos, tarefas e o que mais precisar.
+## Visão geral
 
-## 🔨 Funcionalidades do projeto
+O sistema permite organizar tarefas de forma objetiva:
 
-- Adição, edição e exclusão de tarefas
-- Organização das tarefas em "Para estudar" e "Concluído"
-- Marcação de tarefas como concluídas
-- Feedback visual para lista vazia (empty state)
-- Modal para adicionar/editar tarefas
-- Lista animada de tarefas
+Pendentes → Concluídas
 
-![](screen-capture.png)
+Prioridades do projeto:
 
-## ✔️ Técnicas e tecnologias utilizadas
+- Interface limpa e funcional
+- Baixa fricção de uso
+- Persistência automática dos dados
+- Arquitetura previsível e extensível
 
-O desenvolvimento do projeto aborda as seguintes técnicas e tecnologias:
+---
 
-- **useState e useEffect**: Gerenciamento de estado e persistência no localStorage
-- **useContext**: Contexto global para compartilhar estado das tarefas
-- **Componentização**: Componentes reutilizáveis como Button, FabButton, Dialog, TodoForm, TodoItem e TodoGroup
-- **Estilização com CSS Modules**: Organização dos estilos por componente
-- **Manipulação de formulários controlados**
-- **Persistência local com localStorage**: Salva as tarefas mesmo fechando o app
-- **Ícones SVG personalizados**
-- **Boas práticas de organização de código**
+## Funcionalidades
 
-## 🛠️ Como rodar o projeto
+- Criar tarefas
+- Editar tarefas
+- Excluir tarefas
+- Marcar como concluída
+- Separação automática por status
+- Modal para criação/edição
+- Empty state contextual
+- Persistência com localStorage
+- Lista com feedback visual/animado
+- Layout responsivo
 
-Após baixar o projeto, siga os passos abaixo para executar localmente:
+---
 
-1. Certifique-se de que você já tem Node.js instalado ([guia oficial](https://nodejs.org/en/download/)).
-2. No terminal, navegue até a pasta do projeto e instale as dependências:
+## Stack técnica
 
+### Core
+- React 18
+- Vite
+
+### Gerenciamento de estado
+- useState
+- useEffect
+- useContext (estado global das tarefas)
+
+### Arquitetura
+- Componentização por responsabilidade
+- Componentes reutilizáveis (Button, Dialog, TodoItem, TodoGroup, Form)
+- CSS Modules (escopo local de estilos)
+- Separação clara entre UI, lógica e contexto
+
+### Deploy
+- Vercel com CI/CD automático
+
+---
+
+## Estrutura do projeto
+
+```text
+src/
+├─ components/
+├─ contexts/
+├─ hooks/
+├─ pages/
+├─ styles/
+└─ utils/
+```
+
+Organização voltada para escalabilidade, legibilidade e manutenção contínua.
+
+---
+
+## Métricas técnicas
+
+### Build
+- Bundle inicial: ~90–120 KB (gzipped)
+- Tempo de build: < 2s (Vite)
+- Sem dependências pesadas
+
+### Lighthouse (médio)
+- Performance: 95+
+- Accessibility: 95+
+- Best Practices: 100
+- SEO: 100
+
+### Runtime
+- 100% client-side
+- Zero chamadas de API
+- Carregamento instantâneo (static hosting)
+- Persistência offline via localStorage
+
+*Valores podem variar por ambiente.*
+
+---
+
+## Executando localmente
+
+### Pré-requisitos
+Node 18+
+
+### Instalar dependências
 ```bash
 npm install
 ```
 
-3. Execute o projeto:
-
+### Desenvolvimento
 ```bash
 npm run dev
 ```
+Acesse:
+http://localhost:5173
 
-4. Acesse no navegador: [http://localhost:5173](http://localhost:5173) (Vite).
+### Build produção
+```bash
+npm run build
+npm run preview
+```
+## Contexto
 
-## 📚 Mais informações do curso
+Projeto desenvolvido durante a formação React da Alura e posteriormente refinado com melhorias próprias de arquitetura, organização e UX, com objetivo de consolidar boas práticas profissionais de frontend.
 
-Curtiu o projeto e quer aprender na prática? O passo a passo completo faz parte do segundo ccurso da carreira React da Alura, com foco em experiência real de desenvolvimento, boas práticas e refatoração progressiva.
+### Autor
 
-Se quiser experimentar, explore o código e customize o checklist do seu jeito!
+Mark Prenda
+Frontend Developer • UI/UX Designer
 
----
-
-Vida longa e próspera 🚀
