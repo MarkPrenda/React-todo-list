@@ -99,6 +99,8 @@ Organização voltada para escalabilidade, legibilidade e manutenção contínua
 - Accessibility: 95+
 - Best Practices: 100
 - SEO: 100
+
+  
 ![](lighthouse.png)
 
 ---
